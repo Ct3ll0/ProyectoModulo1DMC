@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as np
 
 st.title("Proyecto módulo 1 Fundamentals")
 st.sidebar.title("Parámetros")
@@ -19,6 +20,17 @@ if modulo == "Módulo Listas":
 
 elif modulo == "Módulo Array":
   st.write("Estás en el módulo de arreglos")
+  
+  limite_inferior=st.number_input("Ingrese el límite inferior",value=1200)
+  limite_superior=st.number_input("Ingrese el límite superior",value=1250)
+  cantidad_produccion=np.random.randint(limite_inferior, limite_superior, cantidad_datos)
+
+  st.write(datos_produccion)
+
+  st.write("La producción total es:" , np.sum(datos_produccion))
+  st.write("La producción promedio es:" , np.mean(datos_produccion))
+
+
 
 else:
   st.write("Estás en el módulo de funciones")
