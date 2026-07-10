@@ -23,7 +23,9 @@ elif modulo == "Módulo Array":
   
   limite_inferior=st.number_input("Ingrese el límite inferior",value=1200)
   limite_superior=st.number_input("Ingrese el límite superior",value=1250)
-  cantidad_produccion=np.random.randint(limite_inferior, limite_superior, cantidad_datos)
+  cantidad_datos =  st.number_input("Ingrese totalidad de datos a crear", value = 31)
+  
+  datos_produccion=np.random.randint(limite_inferior, limite_superior, cantidad_datos)
 
   st.write(datos_produccion)
 
